@@ -30,6 +30,6 @@ RUN apt-get update && \
 #RUN chown -R jenkins:jenkins /home/jenkins/.m2/ && \
 #    chown -R jenkins:jenkins /home/jenkins/.ssh/
 # Standard SSH port
-EXPOSE 22
+#EXPOSE 22
 
-CMD ["/usr/sbin/sshd", "-D"]
+#CMD ["/usr/sbin/sshd", "-D"]
