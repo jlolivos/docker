@@ -23,9 +23,9 @@ RUN apt-get update && \
     echo "jenkins:jenkins" | chpasswd && \
     mkdir /home/jenkins/.m2
 #ADD settings.xml /home/jenkins/.m2/
-COPY resources/settings.xml /home/jenkins/.m2/
+#COPY resources/settings.xml /home/jenkins/.m2/
 # Copy authorized keys
-COPY resources/authorized_keys /home/jenkins/.ssh/authorized_keys
+#COPY resources/authorized_keys /home/jenkins/.ssh/authorized_keys
 # Change privileges over files copied
 RUN chown -R jenkins:jenkins /home/jenkins/.m2/ && \
     chown -R jenkins:jenkins /home/jenkins/.ssh/
